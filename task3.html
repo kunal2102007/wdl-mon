@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3</title>
+</head>
+<body>
+
+<script>
+let farm = {
+    farmerName: "Kunal",
+    plotID: "AGR-1234",
+    cropStage: "Grand Growth",
+    soilMoisture: 28,
+    area: 5,
+    pumpStatus: "OFF",
+
+    displayFarmInfo: function() {
+        document.write("Farmer Name: " + this.farmerName + "<br>");
+        document.write("Plot ID: " + this.plotID + "<br>");
+        document.write("Crop Stage: " + this.cropStage + "<br>");
+        document.write("Soil Moisture: " + this.soilMoisture + "%<br>");
+        document.write("Area: " + this.area + " acres<br>");
+        document.write("Pump Status: " + this.pumpStatus + "<br>");
+    },
+
+    checkIrrigation: function() {
+        if (this.soilMoisture < 30)
+            return "Irrigation Required";
+        else
+            return "Irrigation Not Required";
+    },
+
+    updatePumpStatus: function(status) {
+        this.pumpStatus = status;
+        return "Pump Status: " + status;
+    }
+};
+
+farm.displayFarmInfo();
+document.write("Irrigation Status: " + farm.checkIrrigation() + "<br>");
+document.write(farm.updatePumpStatus("ON"));
+</script>
+
+</body>
+</html>

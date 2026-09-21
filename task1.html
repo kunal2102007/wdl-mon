@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soil Moisture Irrigation</title>
+</head>
+
+<body>
+
+<script>
+    let farmerName = prompt("Enter Farmer Name:");
+    let plotID = prompt("Enter Plot ID:");
+
+    let currentMoisture = parseFloat(
+        prompt("Enter Current Soil Moisture (%):")
+    );
+
+    let requiredMoisture = parseFloat(
+        prompt("Enter Required Soil Moisture (%):")
+    );
+    let moistureDeficit = requiredMoisture - currentMoisture;
+    let status;
+
+    if (moistureDeficit > 0) {
+        status = "Irrigation Required";
+    } else {
+        status = "Irrigation Not Required";
+    }
+    alert(status);
+    document.write("<h2>Soil Moisture Report</h2>");
+    document.write("<p><b>Farmer Name:</b> " + farmerName + "</p>");
+    document.write("<p><b>Plot ID:</b> " + plotID + "</p>");
+    document.write("<p><b>Current Soil Moisture:</b> " 
+                   + currentMoisture + "%</p>");
+    document.write("<p><b>Required Soil Moisture:</b> " 
+                   + requiredMoisture + "%</p>");
+    document.write("<p><b>Moisture Deficit:</b> " 
+                   + moistureDeficit + "%</p>");
+    document.write("<p><b>Status:</b> " + status + "</p>");
+
+</script>
+
+</body>
+</html>

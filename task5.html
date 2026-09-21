@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body>
+
+<script>
+let farmerName = prompt("Enter Farmer Name:");
+let mobile = prompt("Enter Mobile Number:");
+let plotID = prompt("Enter Plot ID:");
+
+let namePattern = /^[A-Za-z ]+$/;
+let mobilePattern = /^[0-9]{10}$/;
+let plotPattern = /^AGR-[0-9]{4}$/;
+
+if (namePattern.test(farmerName))
+    document.write("Farmer Name: Valid<br>");
+else
+    document.write("Farmer Name: Invalid<br>");
+
+if (mobilePattern.test(mobile))
+    document.write("Mobile Number: Valid<br>");
+else
+    document.write("Mobile Number: Invalid<br>");
+
+if (plotPattern.test(plotID))
+    document.write("Plot ID: Valid");
+else
+    document.write("Plot ID: Invalid");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 6</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f8ff;
+        }
+
+        form {
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid blue;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: blue;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<form onsubmit="return validateForm()">
+
+    <h2>Farmer Registration</h2>
+
+    <label>Farmer Name:</label>
+    <input type="text" id="farmerName">
+
+    <label>Mobile Number:</label>
+    <input type="text" id="mobile">
+
+    <label>Plot ID:</label>
+    <input type="text" id="plotID">
+
+    <label>Soil Moisture:</label>
+    <input type="number" id="soilMoisture">
+
+    <label>Crop Stage:</label>
+    <select id="cropStage">
+        <option value="">Select</option>
+        <option>Germination</option>
+        <option>Tillering</option>
+        <option>Grand Growth</option>
+        <option>Maturity</option>
+    </select>
+
+    <label>Irrigation Date:</label>
+    <input type="date" id="irrigationDate">
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<script>
+function validateForm() {
+
+    let farmerName = document.getElementById("farmerName").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+    let plotID = document.getElementById("plotID").value.trim();
+    let soilMoisture = document.getElementById("soilMoisture").value;
+    let cropStage = document.getElementById("cropStage").value;
+    let irrigationDate = document.getElementById("irrigationDate").value;
+
+    if (
+        farmerName === "" ||
+        mobile === "" ||
+        plotID === "" ||
+        soilMoisture === "" ||
+        cropStage === "" ||
+        irrigationDate === ""
+    ) {
+        alert("All fields are required");
+        return false;
+    }
+
+    if (!/^[A-Za-z ]+$/.test(farmerName)) {
+        alert("Invalid Farmer Name");
+        return false;
+    }
+
+    if (!/^[0-9]{10}$/.test(mobile)) {
+        alert("Invalid Mobile Number");
+        return false;
+    }
+
+    if (!/^AGR-[0-9]{4}$/.test(plotID)) {
+        alert("Invalid Plot ID");
+        return false;
+    }
+
+    soilMoisture = parseFloat(soilMoisture);
+
+    if (soilMoisture < 0 || soilMoisture > 100) {
+        alert("Soil Moisture must be between 0 and 100");
+        return false;
+    }
+
+    alert("Registration Successful");
+    return true;
+}
+</script>
+
+</body>
+</html>

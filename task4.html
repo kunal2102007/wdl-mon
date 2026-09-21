@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4</title>
+</head>
+<body>
+
+<script>
+let readings = [25, 32, 45, 28, 55, 40, 22, 48];
+let criticalValue = 30;
+
+document.write("<h2>Sensor Readings</h2>");
+
+for (let i = 0; i < readings.length; i++)
+    document.write(readings[i] + "%<br>");
+
+let minimum = Math.min(...readings);
+let maximum = Math.max(...readings);
+
+let total = 0;
+
+for (let i = 0; i < readings.length; i++)
+    total += readings[i];
+
+let average = total / readings.length;
+
+let count = 0;
+
+for (let i = 0; i < readings.length; i++) {
+    if (readings[i] < criticalValue)
+        count++;
+}
+
+document.write("<hr>");
+document.write("Minimum: " + minimum + "%<br>");
+document.write("Maximum: " + maximum + "%<br>");
+document.write("Average: " + average.toFixed(2) + "%<br>");
+document.write("Below Critical Value: " + count);
+</script>
+
+</body>
+</html>
