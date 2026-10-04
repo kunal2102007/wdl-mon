@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Irrigation System - Home</title>
+
+    <!-- TASK 3 : External CSS for the whole website theme -->
+    <link rel="stylesheet" href="style.css">
+    <!-- TASK 4, 6, 9, 10 : Layout, sidebar, gallery, offer box -->
+    <link rel="stylesheet" href="layout.css">
+    <!-- TASK 5 : Card layout -->
+    <link rel="stylesheet" href="card.css">
+
+    <!-- TASK 2 : Internal CSS for the navigation menu -->
+    <style>
+        nav {
+            background-color: #003366;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;      /* remove bullet points */
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;      /* items in one horizontal row */
+        }
+        nav ul li a {
+            display: inline-block;
+            color: #ffffff;             /* link colour */
+            text-decoration: none;      /* remove underline */
+            padding: 14px 22px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {             /* hover effect */
+            background-color: #0066cc;
+            color: #ffeb3b;
+        }
+        nav ul li a.active {
+            background-color: #0066cc;
+        }
+        @media (max-width: 600px) {
+            nav ul li { display: block; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- TASK 1 : Header styled with INLINE CSS -->
+    <header style="background-color: #0066cc; padding: 30px 20px; border-bottom: 5px solid #003366; text-align: center;">
+        <h1 style="color: #ffffff; margin: 0 0 10px 0; font-size: 34px;">AI Smart Irrigation System</h1>
+        <p style="color: #ffffff; text-align: center; margin: 0; font-size: 16px;">Save water, grow more &ndash; smart irrigation powered by soil sensors and weather data</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="report.html">Irrigation Report</a></li>
+            <li><a href="register.html">Farmer Registration</a></li>
+            <li><a href="media.html">Awareness</a></li>
+            <li><a href="bootstrap.html">Bootstrap Version</a></li>
+        </ul>
+    </nav>
+
+    <!-- TASK 9 : Sidebar (left) + Content (right) layout -->
+    <div class="main-layout">
+
+        <!-- TASK 4 : Categories sidebar card -->
+        <aside class="sidebar">
+            <div class="categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li>Drip Irrigation</li>
+                    <li>Sprinkler Systems</li>
+                    <li>Soil Moisture Sensors</li>
+                    <li>Weather Forecasting</li>
+                    <li>Crop Monitoring Drones</li>
+                    <li>Solar Water Pumps</li>
+                    <li>Water Usage Reports</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content">
+
+            <!-- TASK 10 : Offer box with glowing / blinking effect -->
+            <section>
+                <div class="offer-box">
+                    <span class="blink">NEW!</span>
+                    50% Subsidy on Drip Irrigation Kits
+                    <span>Register before 31 October 2026 under the state water-saving scheme.</span>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section>
+                <h2>About the System</h2>
+                <p>The AI Smart Irrigation System reads soil moisture levels and local weather
+                   forecasts for every farm plot and tells the farmer exactly when to water and
+                   how much. Plots that already have enough moisture are skipped, so less water
+                   is wasted and crops still get what they need.</p>
+            </section>
+
+            <!-- TASK 5 : Product / service cards -->
+            <section>
+                <h2>Our Irrigation Solutions</h2>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="icon">&#128167;</div>
+                        <h3>Drip Irrigation Kit</h3>
+                        <p>Delivers water directly to the roots and cuts water use by up to 60%.</p>
+                        <span class="price">&#8377; 12,500 / acre</span>
+                        <a href="register.html">Register</a>
+                    </div>
+                    <div class="card">
+                        <div class="icon">&#127793;</div>
+                        <h3>Soil Moisture Sensor</h3>
+                        <p>Measures soil moisture every hour and sends readings to your phone.</p>
+                        <span class="price">&#8377; 2,800 / unit</span>
+                        <a href="register.html">Register</a>
+                    </div>
+                    <div class="card">
+                        <div class="icon">&#9925;</div>
+                        <h3>Weather Alerts</h3>
+                        <p>Pauses irrigation automatically when rain is expected in your village.</p>
+                        <span class="price">&#8377; 199 / month</span>
+                        <a href="register.html">Register</a>
+                    </div>
+                    <div class="card">
+                        <div class="icon">&#9728;</div>
+                        <h3>Solar Water Pump</h3>
+                        <p>Runs your irrigation on solar power with zero electricity bills.</p>
+                        <span class="price">&#8377; 85,000 / unit</span>
+                        <a href="register.html">Register</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TASK 6 : Image gallery -->
+            <section>
+                <h2>Featured Technologies</h2>
+                <div class="gallery">
+                    <img src="images/drip.svg" alt="Drip irrigation pipes watering crop rows">
+                    <img src="images/sprinkler.svg" alt="Sprinkler watering a field">
+                    <img src="images/sensor.svg" alt="Soil moisture sensor in the ground">
+                    <img src="images/weather.svg" alt="Weather forecast with sun, cloud and rain">
+                    <img src="images/drone.svg" alt="Drone monitoring crops from above">
+                    <img src="images/solar.svg" alt="Solar panel powering a water pump">
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AI Smart Irrigation System</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Irrigation System - Farmer Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- TASK 8 : Form styling -->
+    <link rel="stylesheet" href="form.css">
+
+    <!-- TASK 2 : Internal CSS for the navigation menu -->
+    <style>
+        nav {
+            background-color: #003366;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;      /* remove bullet points */
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;      /* items in one horizontal row */
+        }
+        nav ul li a {
+            display: inline-block;
+            color: #ffffff;             /* link colour */
+            text-decoration: none;      /* remove underline */
+            padding: 14px 22px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {             /* hover effect */
+            background-color: #0066cc;
+            color: #ffeb3b;
+        }
+        nav ul li a.active {
+            background-color: #0066cc;
+        }
+        @media (max-width: 600px) {
+            nav ul li { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TASK 1 : Header styled with INLINE CSS -->
+    <header style="background-color: #0066cc; padding: 30px 20px; border-bottom: 5px solid #003366; text-align: center;">
+        <h1 style="color: #ffffff; margin: 0 0 10px 0; font-size: 34px;">AI Smart Irrigation System</h1>
+        <p style="color: #ffffff; text-align: center; margin: 0; font-size: 16px;">Farmer Registration Portal</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="report.html">Irrigation Report</a></li>
+            <li><a href="register.html" class="active">Farmer Registration</a></li>
+            <li><a href="media.html">Awareness</a></li>
+            <li><a href="bootstrap.html">Bootstrap Version</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Farmer Information</legend>
+
+                <label for="fname">Farmer Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter full name" required>
+
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="Enter 10 digit mobile number" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email address">
+
+                <label for="plot">Plot ID:</label>
+                <input type="text" id="plot" name="plot" placeholder="Example: Plot A101" required>
+
+                <label for="village">Village:</label>
+                <input type="text" id="village" name="village" placeholder="Enter village name">
+            </fieldset>
+
+            <fieldset>
+                <legend>Farm Details</legend>
+
+                <label for="stage">Crop Stage:</label>
+                <select id="stage" name="stage" required>
+                    <option value="">Select Crop Stage</option>
+                    <option>Sowing</option>
+                    <option>Vegetative</option>
+                    <option>Flowering</option>
+                    <option>Harvesting</option>
+                </select>
+
+                <label for="soil">Soil Type:</label>
+                <select id="soil" name="soil" required>
+                    <option value="">Select Soil Type</option>
+                    <option>Black Soil</option>
+                    <option>Red Soil</option>
+                    <option>Alluvial Soil</option>
+                    <option>Sandy Soil</option>
+                </select>
+
+                <label for="method">Irrigation Method:</label>
+                <select id="method" name="method" required>
+                    <option value="">Select Irrigation Method</option>
+                    <option>Drip Irrigation</option>
+                    <option>Sprinkler Irrigation</option>
+                    <option>Flood Irrigation</option>
+                </select>
+
+                <label for="area">Farm Area (acres):</label>
+                <input type="number" id="area" name="area" min="0.5" step="0.5" placeholder="Example: 2.5">
+
+                <label>Water Source:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="source" value="well"> Well</label>
+                    <label><input type="radio" name="source" value="canal"> Canal</label>
+                    <label><input type="radio" name="source" value="borewell"> Borewell</label>
+                </div>
+
+                <label>Services Required:</label>
+                <div class="check-group">
+                    <label><input type="checkbox" name="service" value="sensor"> Soil Sensor</label>
+                    <label><input type="checkbox" name="service" value="weather"> Weather Alerts</label>
+                    <label><input type="checkbox" name="service" value="solar"> Solar Pump</label>
+                </div>
+
+                <label for="remarks">Remarks:</label>
+                <textarea id="remarks" name="remarks" rows="3" placeholder="Any other details about your farm"></textarea>
+            </fieldset>
+
+            <div class="form-actions">
+                <input type="submit" value="Register Farmer" class="btn btn-submit">
+                <input type="reset" value="Clear Form" class="btn btn-reset">
+            </div>
+
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AI Smart Irrigation System</p>
+    </footer>
+</body>
+</html>

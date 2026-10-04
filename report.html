@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Irrigation System - Irrigation Report</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- TASK 7 : Table styling -->
+    <link rel="stylesheet" href="table.css">
+
+    <!-- TASK 2 : Internal CSS for the navigation menu -->
+    <style>
+        nav {
+            background-color: #003366;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;      /* remove bullet points */
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;      /* items in one horizontal row */
+        }
+        nav ul li a {
+            display: inline-block;
+            color: #ffffff;             /* link colour */
+            text-decoration: none;      /* remove underline */
+            padding: 14px 22px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {             /* hover effect */
+            background-color: #0066cc;
+            color: #ffeb3b;
+        }
+        nav ul li a.active {
+            background-color: #0066cc;
+        }
+        @media (max-width: 600px) {
+            nav ul li { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TASK 1 : Header styled with INLINE CSS -->
+    <header style="background-color: #0066cc; padding: 30px 20px; border-bottom: 5px solid #003366; text-align: center;">
+        <h1 style="color: #ffffff; margin: 0 0 10px 0; font-size: 34px;">AI Smart Irrigation System</h1>
+        <p style="color: #ffffff; text-align: center; margin: 0; font-size: 16px;">Soil Moisture Analysis and Water Recommendation</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="report.html" class="active">Irrigation Report</a></li>
+            <li><a href="register.html">Farmer Registration</a></li>
+            <li><a href="media.html">Awareness</a></li>
+            <li><a href="bootstrap.html">Bootstrap Version</a></li>
+        </ul>
+    </nav>
+
+    <h2 class="table-title">Farm Plot Irrigation Recommendation Report</h2>
+
+    <div class="table-scroll">
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Plot ID</th>
+                <th rowspan="2">Farmer Name</th>
+                <th rowspan="2">Soil Moisture (%)</th>
+                <th rowspan="2">Weather</th>
+                <th colspan="2">Irrigation Details</th>
+            </tr>
+            <tr>
+                <th>Irrigation Recommendation</th>
+                <th>Water Requirement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Plot A</td><td>Raj Patel</td><td>35%</td><td>Sunny</td><td>Start Drip Irrigation</td><td>500 Litres</td></tr>
+            <tr><td>Plot B</td><td>Amit Sharma</td><td>55%</td><td>Cloudy</td><td>Reduce Irrigation</td><td>250 Litres</td></tr>
+            <tr><td>Plot C</td><td>Priya Singh</td><td>75%</td><td>Rainy</td><td>No Irrigation Required</td><td>0 Litres</td></tr>
+            <tr><td>Plot D</td><td>Vijay Kumar</td><td>25%</td><td>Hot &amp; Dry</td><td>Increase Water Supply</td><td>800 Litres</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="5">Total Recommended Water Usage</td><td>1550 Litres</td></tr>
+        </tfoot>
+    </table>
+    </div>
+
+    <h2 class="table-title">Irrigation Equipment Price List</h2>
+
+    <div class="table-scroll">
+    <table>
+        <thead>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Equipment</th>
+                <th>Unit</th>
+                <th>Price (&#8377;)</th>
+                <th>Water Saving</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Drip Irrigation Kit</td><td>Per acre</td><td>12,500</td><td>Up to 60%</td></tr>
+            <tr><td>2</td><td>Sprinkler Set</td><td>Per acre</td><td>9,000</td><td>Up to 35%</td></tr>
+            <tr><td>3</td><td>Soil Moisture Sensor</td><td>Per unit</td><td>2,800</td><td>Up to 25%</td></tr>
+            <tr><td>4</td><td>Weather Alert Service</td><td>Per month</td><td>199</td><td>Up to 15%</td></tr>
+            <tr><td>5</td><td>Solar Water Pump</td><td>Per unit</td><td>85,000</td><td>Saves power cost</td></tr>
+        </tbody>
+    </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AI Smart Irrigation System</p>
+    </footer>
+</body>
+</html>
