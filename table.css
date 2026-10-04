@@ -1,27 +1,24 @@
-/* =========================================================
-   TASK 7 : table.css - Table styling for report / price list
-   ========================================================= */
 
 table {
     width: 90%;
     margin: 20px auto;
-    border-collapse: collapse;      /* Collapse borders */
+    border-collapse: collapse;      
     background-color: #ffffff;
 }
 
 th, td {
     border: 2px solid #003366;
     padding: 10px;
-    text-align: center;             /* Centre align text */
+    text-align: center;             
 }
 
-/* Header background colour */
+
 th {
     background-color: #0066cc;
     color: #ffffff;
 }
 
-/* Zebra striping using nth-child(even) */
+
 tbody tr:nth-child(even) {
     background-color: #d9eaff;
 }
@@ -30,7 +27,7 @@ tbody tr:hover {
     background-color: #b3d4ff;
 }
 
-/* Total row in the footer */
+
 tfoot td {
     background-color: #0066cc;
     color: #ffffff;
@@ -42,7 +39,7 @@ tfoot td {
     margin-top: 25px;
 }
 
-/* Wide tables scroll sideways on phones instead of breaking the page */
+
 .table-scroll {
     overflow-x: auto;
 }
