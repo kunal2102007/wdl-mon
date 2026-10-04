@@ -1,0 +1,64 @@
+/* =========================================================
+   TASK 5 : card.css - Card layout using the CSS Box Model
+   Each irrigation product/service is shown as a card.
+   ========================================================= */
+
+.card-wrapper {
+    text-align: center;          /* centres the inline-block cards */
+}
+
+.card {
+    display: inline-block;       /* cards sit side by side */
+    vertical-align: top;
+    width: 175px;                /* Width */
+    margin: 8px;                 /* Margin  (outside space) */
+    padding: 18px 14px;          /* Padding (inside space)  */
+    border: 1px solid #99c2ff;   /* Border */
+    border-radius: 10px;
+    background-color: #ffffff;   /* Background colour */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);   /* Shadow */
+    text-align: center;          /* Centre align content */
+}
+
+.card .icon {
+    font-size: 40px;
+}
+
+.card h3 {
+    margin: 10px 0 6px;
+    font-size: 17px;
+    min-height: 44px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #335c85;
+    min-height: 84px;
+}
+
+.card .price {
+    display: block;
+    font-weight: bold;
+    color: #0066cc;
+    font-size: 18px;
+    margin: 8px 0 12px;
+}
+
+.card a {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #0066cc;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card a:hover {
+    background-color: #004c99;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+}
